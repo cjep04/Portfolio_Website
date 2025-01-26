@@ -1,0 +1,22 @@
+# Allow all search engines to crawl the site
+User-agent: *
+
+# Disallow crawling of certain directories (replace paths if needed)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+
+# Disallow specific files (example: exclude temporary or sensitive files)
+Disallow: /example-file.html
+Disallow: /sensitive-data.txt
+
+# Allow crawling of CSS, JavaScript, and images
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.png$
+Allow: /*.gif$
+
+# Sitemap location (replace with your actual sitemap URL)
+Sitemap: https://cjep04.github.io/portfolio_website/sitemap.xml
