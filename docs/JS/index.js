@@ -131,3 +131,7 @@ const observer = new IntersectionObserver(entries => {
 
 observer.observe(document.querySelector('#skills_section'));
 
+function toggleMenu() {
+    const navItems = document.querySelector('.nav_items');
+    navItems.classList.toggle('show');
+}

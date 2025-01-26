@@ -595,3 +595,29 @@ html {
     background-color: black;
 }
 
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .nav_items {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav_items ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav_items.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
