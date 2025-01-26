@@ -123,7 +123,7 @@ button.contact-me_nav:hover{
     padding: 100px 20px;
     background-color: #ffffff;
     text-align: center;
-    margin-top: 100px; /* Space below the sticky navbar */
+    margin-top: 200px; /* Space below the sticky navbar */
     padding-top: 200px;
 }
 
