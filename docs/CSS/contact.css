@@ -13,7 +13,6 @@
     padding: 15px 20px; /* Add padding for spacing */
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add a shadow */
     height: 65px; /* Set explicit height for navbar */
-    padding-bottom: 150px;
 }
 
 body{
@@ -124,8 +123,13 @@ button.contact-me_nav:hover{
     padding: 100px 20px;
     background-color: #ffffff;
     text-align: center;
-    margin-top: 200px; /* Space below the sticky navbar */
-    padding-top: 200px;
+    margin-top: 80px; /* Adjust based on navbar height */
+}
+
+@media screen and (max-width: 768px) {
+    #contact_section {
+        margin-top: 60px; /* Adjust for mobile navbar */
+    }
 }
 
 
