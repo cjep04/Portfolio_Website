@@ -1,13 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
     const scrollLine = document.querySelector('.scroll-line');
 
-    window.addEventListener('scroll', () => {
-        const scrollTop = window.scrollY;
-        const docHeight = document.body.scrollHeight - window.innerHeight;
-        const scrollPercent = (scrollTop / docHeight) * 100;
+    if (scrollLine) {
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY; // Pixels scrolled from the top
+            const docHeight = document.body.scrollHeight - window.innerHeight; // Total scrollable height
+            const scrollPercent = (scrollTop / docHeight) * 100; // Scroll percentage
 
-        scrollLine.style.width = scrollPercent + '%';
-    });
+            console.log("Scroll Percent:", scrollPercent); // Debug log
+            scrollLine.style.width = scrollPercent + '%';
+        });
+    } else {
+        console.error("Scroll-line element not found!");
+    }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
