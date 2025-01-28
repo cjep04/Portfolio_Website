@@ -132,6 +132,10 @@ button.contact-me_nav:hover{
     border-radius: 10px;
     overflow: hidden;
     transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-family: "neuzeit-grotesk", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
 }
 
 .dropdown_menu.open{
@@ -143,6 +147,7 @@ button.contact-me_nav:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .dropdown_menu .contact-button{

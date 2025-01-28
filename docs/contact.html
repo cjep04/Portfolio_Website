@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="./CSS/index.css"> <!-- Shared styles (e.g., navbar, footer) -->
     <link rel="stylesheet" href="./css/contact.css"> <!-- Page-specific styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
 </head>
 <body>
     <!-- Header -->
@@ -22,20 +24,44 @@
 <body>
     <header>
         <nav id="nav_bar">
-            <a href="./index.html"><h1 class="nav_name">Charlie Patterson's Portfolio</h1></a>
+            <h1 class="nav_name">Charlie Patterson's Portfolio</h1>
             <div class="nav_items">
                 <ul>
-                    <a href="./index.html"><li>Home</li></a>
-                    <a href="./index.html#about_me_section"><li>About Me</li></a>
-                    <a href="./index.html#project_section"><li>Projects</li></a>
-                    <a href="./index.html#skills_section"><li>Skills</li></a>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="#about_me_section">About Me</a></li>
+                    <li><a href="#project_section">Projects</a></li>
+                    <li><a href="#skills_section">Skills</a></li>
                 </ul>
-                <a href="./contact.html"><button class="contact-me_nav"> Contact Me</button></a>
+                <a href="./contact.html"><button class="contact-me_nav">Contact Me</button></a>
+            </div>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="dropdown_menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#about_me_section">About Me</a></li>
+                <li><a href="#project_section">Projects</a></li>
+                <li><a href="#skills_section">Skills</a></li>
+                <li><a href="./contact.html"><button class="contact-me_nav">Contact Me</button></a></li>
             </div>
         </nav>
-        <!-- Scroll Line -->
         <div class="scroll-line"></div>
     </header>
+    <style>
+        /* Initial styles for dropdown menu */
+        .dropdown_menu {
+            display: none;
+        }
+
+        /* When "open" class is added */
+        .dropdown_menu.open {
+            display: block;
+        }
+
+        .toggle_btn {
+            cursor: pointer;
+        }
+    </style> 
     <!-- Contact Section -->
     <section id="contact_section">
             <div class="embedded-form-container">
@@ -91,4 +117,6 @@
         </div>
     </footer>
 </body>
+ <!-- Link JavaScript Sroll line -->
+ <script src="./JS/contact.js" defer></script>
 </html>
