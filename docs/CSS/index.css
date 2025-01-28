@@ -192,6 +192,8 @@ button.contact-me_nav:hover{
     text-align: center;
     background-color: #ffffff;
     padding-top: 80px; /* Default padding */
+    grid-template:2,3;
+
 }
 
 /* Add more padding for desktop screens */
@@ -242,6 +244,7 @@ em{
     cursor: pointer;/* Change cursor to pointer for buttons */
     transition-duration: 0.4s;
     margin-left: 0px;
+    align-self: center;
 }
 
 button.contact-me_hero:hover{
@@ -310,10 +313,16 @@ button.contact-me_hero:hover{
 }
 /*About me Section*/
 #about_me_section{
-    margin-left: 50px;
-    margin-right: 50px;
-    background-color: #fff;
-    margin-bottom: 50px;
+    padding-top: 50px; /* Add padding for spacing */
+    background-color: #ffffff; /* Light background color */
+    text-align: center; /* Center align text */
+    padding-bottom: 50px;
+    padding-left: 250px;
+    padding-right: 250px;
+}
+
+.about_me_txt{
+    align-self: center;
 }
 
 h2{
