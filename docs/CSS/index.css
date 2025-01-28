@@ -15,11 +15,15 @@
     padding: 15px 20px; /* Add padding for spacing */
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add a shadow */
     height: 65px; /* Set explicit height for navbar */
+    padding: 10px 15px; /* Reduce padding on smaller screens */
+
 }
 
-body{
-    margin: 0%;
-    padding: 0%;
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 .nav_items{
     display: flex;
@@ -69,6 +73,15 @@ body{
     color: #F26A2E;
 }
 
+@media(max-width: 768px) {
+    #nav_bar .nav_name,
+    #about_me_section,
+    .contact-me_hero {
+        margin: 0; /* Remove large margins on small screens */
+        text-align: center; /* Center text */
+    }
+}
+
 /*Nav bar button*/
 .contact-me_nav{
     font-family: "neuzeit-grotesk", sans-serif;
@@ -100,22 +113,87 @@ button.contact-me_nav:hover{
     transition: width 0.2s ease-out; /* Smooth animation */
 }
 
+#nav_bar .toggle_btn{
+    color: #000000;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
 
+/*Dropdown Menu*/
+.dropdown_menu{
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 225, 225, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+    height: 240px;
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .contact-button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/*Responsive Design*/ 
+@media(max-width: 1325px){
+    #nav_bar .nav_items,
+    #nav_bar .action_btn{
+        display: none;
+    }
+
+    #nav_bar .toggle_btn{
+        display: block;
+    }
+
+    .dropdown_menu{
+        display: block;
+    }
+}
+
+@media(max-width: 576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}
 
 
 /* Prevent overlap with hero section */
+/* Default styles for all screens */
 #hero_section {
-    margin-top: 80px; /* Adjust based on navbar height */
-    padding: 15px;
-    display: flex; /* Enable Flexbox */
-    flex-wrap: wrap; /* Wrap content on smaller screens */
-    justify-content: center; /* Center content for smaller screens */
-    align-items: center; /* Align items vertically */
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     background-color: #ffffff;
-    width: 100%; /* Full width */
-    box-sizing: border-box; /* Include padding in width calculation */
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 80px; /* Default padding */
+}
+
+/* Add more padding for desktop screens */
+@media (min-width: 1024px) {
+    #hero_section {
+        padding-top: 120px; /* Increase the spacing between navbar and hero section */
+    }
 }
 /* Hero text container */
 .hero_text{
@@ -141,7 +219,7 @@ em{
 /* Hero image */
 .hero_image{
     width: 500px;
-    margin-right: 300px;
+    margin-right: 0px;
     border: 10px solid #f26a2e;
     border-radius: 50px;
 }
@@ -158,7 +236,7 @@ em{
     border-radius: 15px;
     cursor: pointer;/* Change cursor to pointer for buttons */
     transition-duration: 0.4s;
-    margin-left: 200px;
+    margin-left: 0px;
 }
 
 button.contact-me_hero:hover{
@@ -201,10 +279,34 @@ button.contact-me_hero:hover{
     }
 }
 
+/*hero responisve*/
+@media(max-width: 768px) {
+    /* Center all content */
+    h1, h2, p {
+        text-align: center;
+    }
+
+    .hero_text {
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero_image {
+        margin: 0 auto;
+        width: 90%; /* Scale down the image */
+    }
+
+    .dropdown_menu {
+        width: auto; /* Allow dropdown to adjust dynamically */
+        left: 0; /* Align it with the screen */
+        right: 0;
+        margin: 0 auto; /* Center it */
+    }
+}
 /*About me Section*/
 #about_me_section{
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 50px;
+    margin-right: 50px;
     background-color: #fff;
     margin-bottom: 50px;
 }

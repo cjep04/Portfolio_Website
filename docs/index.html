@@ -12,6 +12,7 @@
         <link rel="icon" href="./Resources/Images/favicon.ico" type="image/x-icon">
         <link rel="shortcut icon" href="./Resources/Images/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
         <link rel="stylesheet" href="./CSS/index.css">
         <title>Charlie Portfolio</title>
     </head>
@@ -28,10 +29,34 @@
                     </ul>
                     <a href="./contact.html"><button class="contact-me_nav">Contact Me</button></a>
                 </div>
-                <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="dropdown_menu">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="#about_me_section">About Me</a></li>
+                    <li><a href="#project_section">Projects</a></li>
+                    <li><a href="#skills_section">Skills</a></li>
+                    <li><a href="./contact.html"><button class="contact-me_nav">Contact Me</button></a></li>
+                </div>
             </nav>
             <div class="scroll-line"></div>
         </header>
+        <style>
+            /* Initial styles for dropdown menu */
+            .dropdown_menu {
+                display: none;
+            }
+    
+            /* When "open" class is added */
+            .dropdown_menu.open {
+                display: block;
+            }
+    
+            .toggle_btn {
+                cursor: pointer;
+            }
+        </style>    
         <!-- Scroll to Top Button -->
         <div id="scroll-to-top">
             <i class="fas fa-arrow-up"></i>
