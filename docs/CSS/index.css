@@ -466,10 +466,12 @@ p{
 
 /* Skills Section */
 #skills_section {
-    padding: 50px 20px; /* Add padding for spacing */
+    padding-top: 50px; /* Add padding for spacing */
     background-color: #ffffff; /* Light background color */
     text-align: center; /* Center align text */
     padding-bottom: 50px;
+    padding-left: 250px;
+    padding-right: 250px;
 }
 
 #skills_section h2 {
